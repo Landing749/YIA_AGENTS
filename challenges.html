@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge of the Day</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Challenge of the Day</h1>
+    <button onclick="logoutAgent()">Logout</button>
+  </header>
 
+  <main>
+    <section id="challengeBox">
+      <h2 id="challengeTitle">Loading...</h2>
+      <p id="challengeDescription"></p>
+    </section>
+  </main>
+
+  <script>
+    // Static file fetch (you can later switch this to a Sheet like Missions)
+    fetch('assets/data/challenges.json')
+      .then(res => res.json())
+      .then(data => {
+        const challenge = data[0]; // Show the latest/first one
+        document.getElementById('challengeTitle').innerText = challenge.title;
+        document.getElementById('challengeDescription').innerText = challenge.description;
+      });
+  </script>
+</body>
+</html>
