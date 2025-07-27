@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YIA Agent Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <h2>Welcome, <span id="agentName"></span></h2>
+  </div>
+  <div class="dashboard">
+    <a class="tile" href="missions.html">Missions</a>
+    <a class="tile" href="challenges.html">Challenge of the Day</a>
+    <a class="tile" href="agent-list.html">Agents</a>
+    <a class="tile" href="cipher.html">Cipher</a>
+    <a class="tile" href="dm.html">Communications</a>
+    <a class="tile" href="distress.html">Distress</a>
+    <a class="tile" href="selfdestruct.html">Self Destruct</a>
+  </div>
+  <script>
+    const name = localStorage.getItem('agentName');
+    document.getElementById('agentName').textContent = name || 'Agent';
+  </script>
+</body>
+</html>
