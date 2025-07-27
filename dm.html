@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YIA Agent App – Direct Messages</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Agent DM</h1>
+    <a href="dashboard.html" class="back-btn">← Back</a>
+  </header>
 
+  <main>
+    <div class="dm-container">
+      <div class="agent-select">
+        <label for="recipient">Send to Agent:</label>
+        <select id="recipient">
+          <option value="" disabled selected>Choose Agent</option>
+          <!-- Populated from agents.json -->
+        </select>
+      </div>
+
+      <div class="dm-box">
+        <div id="dm-thread" class="dm-thread"></div>
+        <div class="dm-input">
+          <input type="text" id="dm-text" placeholder="Type your message..."/>
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/dm.js"></script>
+</body>
+</html>
