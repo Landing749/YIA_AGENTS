@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YIA Agent App – Cipher Encoder/Decoder</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cipher Encoder/Decoder</h1>
+    <a href="dashboard.html" class="back-btn">← Back</a>
+  </header>
 
+  <main>
+    <div class="cipher-container">
+      <textarea id="inputText" placeholder="Enter message..." rows="4"></textarea>
+
+      <div class="cipher-controls">
+        <input type="text" id="cipherKey" placeholder="Keyword (optional)" />
+        <select id="cipherMode">
+          <option value="encode">Encode</option>
+          <option value="decode">Decode</option>
+        </select>
+        <button id="cipherBtn">Run</button>
+      </div>
+
+      <textarea id="outputText" placeholder="Result..." rows="4" readonly></textarea>
+    </div>
+  </main>
+
+  <script src="assets/js/cipher.js"></script>
+</body>
+</html>
