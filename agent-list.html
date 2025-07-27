@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agent List</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/sheet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Agent List</h1>
+    <button onclick="logoutAgent()">Logout</button>
+  </header>
 
+  <main>
+    <table id="agentTable">
+      <thead>
+        <tr>
+          <th>Agent Number</th>
+          <th>Codename</th>
+          <th>Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Agent rows will be injected here -->
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    fetch('assets/data/agents.json')
+      .then(res => res.json())
+      .then(data => {
+        const tableBody = document.querySelector('#agentTable tbody');
+        data.forEach(agent => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${agent.agentNumber}</td>
+            <td>${agent.codename}</td>
+            <td>${agent.rank}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
