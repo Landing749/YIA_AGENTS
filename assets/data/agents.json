@@ -1,1 +1,23 @@
-
+[
+  {
+    "agentNumber": "YIA001",
+    "codename": "ShadowFox",
+    "passcode": "alpha123",
+    "rank": "Field Agent",
+    "status": "Active"
+  },
+  {
+    "agentNumber": "YIA002",
+    "codename": "NightHawk",
+    "passcode": "bravo321",
+    "rank": "Recon",
+    "status": "On Mission"
+  },
+  {
+    "agentNumber": "YIA003",
+    "codename": "EchoViper",
+    "passcode": "charlie456",
+    "rank": "Cyber Analyst",
+    "status": "Standby"
+  }
+]
